@@ -1,4 +1,4 @@
-Here's a template for your `README.md` file based on your BinaryTree implementation:
+
 
 ```markdown
 # BinaryTree Implementation in C++
