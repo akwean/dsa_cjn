@@ -177,21 +177,18 @@ void binaryTreeUserInteraction() {
 
         switch (choice) {
             case 1:
-                cout << "Enter values to insert (separated by spaces): ";
-                getline(cin, input);
-                {
-                    stringstream ss(input);
-                    vector<int> values;
-                    while (ss >> value) {
-                        values.push_back(value);
-                    }
-                    if (values.size() >= 6) {
-                        tree.insertMultiple(values);
-                    } else {
-                        cout << "Please enter at least 6 values." << endl;
-                    }
-                }
-                break;
+    cout << "Enter values to insert (separated by spaces): ";
+    getline(cin, input);
+    {
+        stringstream ss(input);
+        vector<int> values;
+        while (ss >> value) {
+            values.push_back(value);
+        }
+        tree.insertMultiple(values);  // No longer checks for a minimum number of values
+    }
+    break;
+
             case 2:
                 cout << "Inorder traversal: ";
                 tree.inorder();
